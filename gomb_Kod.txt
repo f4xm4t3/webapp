@@ -1,0 +1,88 @@
+// C++ code
+const int buttonPin = 2;    
+const int ledPin =  13;      
+int gomb = 0;        
+void setup()
+{
+  pinMode(0, OUTPUT);
+  pinMode(1, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6,INPUT);
+}
+
+void semmi ()
+{
+  ;delay(1000);   
+  digitalWrite(0, LOW);
+  digitalWrite(1, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  digitalWrite(5, LOW);
+  delay(2000); 
+}
+
+void csucs()
+{
+ for (int i = 0; i <= 5; i++) {
+  digitalWrite(0, HIGH);
+  delay(500);   
+  digitalWrite(0, LOW);
+  delay(500); 
+  }
+}
+
+void feny1 ()
+{
+  delay(1000);
+  digitalWrite(0, HIGH);
+  digitalWrite(1, HIGH);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
+  delay(1000);   
+  digitalWrite(0, LOW);
+  digitalWrite(1, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  digitalWrite(5, LOW);
+  delay(1000); 
+}
+
+void feny2 ()
+{
+  delay(1000);
+  digitalWrite(0, HIGH);
+  digitalWrite(1, LOW);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, LOW);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, LOW);
+  delay(1000);   
+  digitalWrite(0, HIGH);
+  digitalWrite(1, LOW);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, LOW);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, LOW);
+  delay(1000); 
+}
+void loop(){
+  gomb = digitalRead(6);
+  if(gomb == HIGH){
+ csucs();
+ feny1();
+ feny1(); 
+ semmi();
+  }else{
+    csucs();
+    feny2();
+    feny2(); 
+    semmi();
+  }
+}

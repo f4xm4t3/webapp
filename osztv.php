@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo("hello world!")?>
+    <?php phpinfo(); ?>
 </body>
 </html>
